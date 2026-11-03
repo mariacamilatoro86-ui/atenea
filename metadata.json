@@ -1,0 +1,6 @@
+{
+  "name": "Atenea Biblioteca",
+  "description": "Biblioteca digital y física con lector editorial, archivo marginal, agenda cultural y carnet de socio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-bright": "#373940",
+        "tertiary-container": "#aa9179",
+        "tertiary": "#dec2a7",
+        "on-secondary": "#4e2601",
+        "outline-variant": "#55433c",
+        "on-primary-fixed": "#370e00",
+        "surface-dim": "#111319",
+        "surface-container-high": "#282a30",
+        "secondary-fixed-dim": "#fcb887",
+        "surface-container-low": "#191b21",
+        "on-surface-variant": "#dcc1b7",
+        "secondary": "#fcb887",
+        "on-tertiary-fixed-variant": "#56432f",
+        "on-secondary-fixed": "#301400",
+        "on-primary-fixed-variant": "#7c2e08",
+        "surface-container": "#1d1f26",
+        "surface-container-highest": "#33353b",
+        "tertiary-fixed": "#fbddc2",
+        "secondary-fixed": "#ffdcc5",
+        "surface-container-lowest": "#0c0e14",
+        "inverse-on-surface": "#2e3037",
+        "primary-fixed-dim": "#ffb598",
+        "background": "#111319",
+        "surface-tint": "#ffb598",
+        "outline": "#a38c83",
+        "inverse-primary": "#9a451e",
+        "on-error-container": "#ffdad6",
+        "on-primary-container": "#561b00",
+        "primary": "#ffb598",
+        "surface": "#111319",
+        "error-container": "#93000a",
+        "on-secondary-fixed-variant": "#693b15",
+        "on-background": "#e2e2ea",
+        "error": "#ffb4ab",
+        "inverse-surface": "#e2e2ea",
+        "on-surface": "#e2e2ea",
+        "on-tertiary-container": "#3c2b18",
+        "primary-container": "#e07a4f",
+        "secondary-container": "#6c3d17",
+        "on-secondary-container": "#ecaa7a",
+        "tertiary-fixed-dim": "#dec2a7",
+        "on-tertiary": "#3e2d1a",
+        "on-tertiary-fixed": "#271908",
+        "primary-fixed": "#ffdbce",
+        "surface-variant": "#33353b",
+        "on-primary": "#591c00",
+        "on-error": "#690005"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-md": "1rem",
+        "gutter-mobile": "1rem",
+        "margin-mobile": "1.25rem",
+        "space-sm": "0.5rem",
+        "margin": "1.25rem",
+        "gutter": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem"
+      },
+      "fontFamily": {
+        "title-md": ["Inter"],
+        "body-md": ["Inter"],
+        "body-lg": ["EB Garamond"],
+        "headline-lg": ["EB Garamond"],
+        "display-lg": ["EB Garamond"],
+        "display-lg-mobile": ["EB Garamond"],
+        "title-lg": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["EB Garamond"],
+        "label-sm": ["Inter"],
+        "headline-md": ["EB Garamond"],
+        "label-md": ["Inter"]
+      },
+      "fontSize": {
+        "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "body-lg": ["20px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "display-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+        "title-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }],
+        "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }]
+      }
+    }
+  }
+};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-white"><header class="fixed top-0 w-full z-50 pt-safe bg-[#111319]/90 backdrop-blur-xl border-b border-white/5"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Logo Atenea Biblioteca" class="h-8 w-auto object-contain filter invert opacity-90" src="https://lh3.googleusercontent.com/d/1O5D6k8_gO1i8f2-iN74uQx_hRjTzJb-l"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Atenea</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-none mt-0.5">Biblioteca</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificaciones" class="relative w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-[#1d1f26] transition-colors" type="button"><span class="material-symbols-outlined text-2xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-[#111319]"></span></button><a class="w-11 h-11 rounded-full p-0.5 flex items-center justify-center hover:opacity-90 transition-opacity" data-path="perfil-de-lector" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyQFwArr4SiH1TbrLkNnPLynX9LCRb-BJeF51IG6B5dJPoTTiNbZY1HQh65A96-9DpMKEInCdurLOhAysaKBECyK7CcAyj2olCXbsELr42ooK2-bJio3ZeD-vt74BjTaQ4J_2sCcDrpteoD5ZYz_ev8VaXf0rUcJT9HDAKnQPGWcpVoxTRl8zuF5riz2-n67umq8364V9w-5DkMSzIKxLk1Qkc8yxEBy-OWdP8lsQEGhmOy3G_C2fMcw"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-[#111319] pb-24"><div class="flex flex-col w-full px-margin pb-8 space-y-space-lg">
+<!-- Breadcrumb & Ambient Greeting -->
+<div class="flex items-center justify-between pt-2">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Mesa de Préstamos</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Credencial &amp; Actividad</h1>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-[#1d1f26] border border-white/5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-emerald-400 uppercase">Lector Activo</span>
+</div>
+</div>
+<!-- Credencial Digital de Lector Premium -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#12182b] via-[#0f1422] to-[#0a0d17] text-white p-5 border border-white/10 shadow-2xl transition-all duration-300">
+<!-- Filigrana decorativa de fondo -->
+<div class="absolute -right-12 -top-12 w-48 h-48 opacity-15 pointer-events-none text-primary">
+<svg class="w-full h-full fill-current" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-dasharray="3,3" stroke-width="1.5"></circle>
+<circle cx="50" cy="50" fill="none" r="35" stroke="currentColor" stroke-width="0.8"></circle>
+<path d="M50 10 L50 90 M10 50 L90 50 M22 22 L78 78 M22 78 L78 22" stroke="currentColor" stroke-width="0.5"></path>
+</svg>
+</div>
+<!-- Encabezado de la Tarjeta -->
+<div class="relative z-10 flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm tracking-widest text-primary uppercase leading-tight font-semibold">Atenea</p>
+<p class="font-label-sm text-[10px] text-white/50 uppercase">Carnet de Lector</p>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/20 border border-primary/30 text-primary font-label-sm text-[11px] tracking-wide">
+        Frecuente
+      </span>
+</div>
+<!-- Nombre y Clave de Socio -->
+<div class="relative z-10 mt-5">
+<p class="font-label-sm text-[11px] text-white/45 uppercase tracking-wider">Titular de la membresía</p>
+<h2 class="font-headline-md text-headline-md tracking-tight text-white mt-0.5">Elena Morales Ruiz</h2>
+<div class="flex items-center gap-4 mt-2">
+<div>
+<span class="font-label-sm text-[10px] text-white/45 uppercase">Nº de Socio</span>
+<p class="font-label-md text-label-md text-primary tracking-widest font-mono font-medium">AT-8942-B</p>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-white/45 uppercase">Validez</span>
+<p class="font-label-md text-label-md text-white/80">12 / 2026</p>
+</div>
+</div>
+</div>
+<!-- Sector QR y Escaneo Rápido -->
+<div class="relative z-10 mt-5 pt-4 bg-white/[0.04] backdrop-blur-md rounded-xl p-3 border border-white/5 flex items-center justify-between gap-3">
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-white/90 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">contactless</span>
+          Mostrador &amp; Kiosco
+        </span>
+<span class="font-body-sm text-body-sm text-white/50 mt-0.5 text-xs">Alinea para préstamo automático</span>
+<!-- Simulación de código de barras tipográfico -->
+<div class="flex items-end gap-[2px] mt-2 h-4 opacity-75">
+<span class="w-[2px] h-full bg-white/70"></span>
+<span class="w-[1px] h-3 bg-white/70"></span>
+<span class="w-[3px] h-full bg-white/70"></span>
+<span class="w-[1px] h-2 bg-white/70"></span>
+<span class="w-[2px] h-full bg-white/70"></span>
+<span class="w-[1px] h-3 bg-white/70"></span>
+<span class="w-[4px] h-full bg-white/70"></span>
+<span class="w-[2px] h-2 bg-white/70"></span>
+<span class="w-[1px] h-full bg-white/70"></span>
+<span class="w-[3px] h-3 bg-white/70"></span>
+</div>
+</div>
+<!-- QR Code Visual de Alta Precisión en contenedor nítido -->
+<div class="bg-white p-2 rounded-lg shadow-md shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16" fill="none" viewbox="0 0 29 29">
+<rect fill="#FFFFFF" height="29" width="29"></rect>
+<!-- Marker Top-Left -->
+<rect fill="#111319" height="7" width="7" x="2" y="2"></rect>
+<rect fill="#FFFFFF" height="5" width="5" x="3" y="3"></rect>
+<rect fill="#111319" height="3" width="3" x="4" y="4"></rect>
+<!-- Marker Top-Right -->
+<rect fill="#111319" height="7" width="7" x="20" y="2"></rect>
+<rect fill="#FFFFFF" height="5" width="5" x="21" y="3"></rect>
+<rect fill="#111319" height="3" width="3" x="22" y="4"></rect>
+<!-- Marker Bottom-Left -->
+<rect fill="#111319" height="7" width="7" x="2" y="20"></rect>
+<rect fill="#FFFFFF" height="5" width="5" x="3" y="21"></rect>
+<rect fill="#111319" height="3" width="3" x="4" y="22"></rect>
+<!-- Data Pixels Mock -->
+<rect fill="#111319" height="2" width="2" x="11" y="2"></rect>
+<rect fill="#111319" height="2" width="2" x="15" y="4"></rect>
+<rect fill="#111319" height="1" width="3" x="11" y="6"></rect>
+<rect fill="#111319" height="3" width="2" x="2" y="11"></rect>
+<rect fill="#111319" height="2" width="1" x="6" y="11"></rect>
+<rect fill="#111319" height="7" width="7" x="11" y="11"></rect>
+<rect fill="#FFFFFF" height="3" width="3" x="13" y="13"></rect>
+<rect fill="#111319" height="2" width="2" x="20" y="11"></rect>
+<rect fill="#111319" height="2" width="3" x="24" y="13"></rect>
+<rect fill="#111319" height="2" width="3" x="11" y="20"></rect>
+<rect fill="#111319" height="4" width="2" x="16" y="22"></rect>
+<rect fill="#111319" height="3" width="2" x="20" y="20"></rect>
+<rect fill="#111319" height="2" width="3" x="24" y="22"></rect>
+</svg>
+</div>
+</div>
+</div>
+<!-- Métricas Rápidas / Bento Stats -->
+<div class="grid grid-cols-3 gap-2.5">
+<div class="bg-[#1e212a] border border-white/5 rounded-xl p-3 flex flex-col items-center text-center shadow-md">
+<span class="font-headline-md text-headline-md text-primary leading-none">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5">En préstamo</span>
+</div>
+<div class="bg-[#1e212a] border border-white/5 rounded-xl p-3 flex flex-col items-center text-center shadow-md">
+<span class="font-headline-md text-headline-md text-secondary leading-none">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5">Reserva</span>
+</div>
+<div class="bg-[#1e212a] border border-white/5 rounded-xl p-3 flex flex-col items-center text-center shadow-md">
+<span class="font-headline-md text-headline-md text-tertiary leading-none">24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5">Leídos este año</span>
+</div>
+</div>
+<!-- Pestañas Interactivas -->
+<div class="flex items-center gap-1.5 p-1 bg-[#1a1d24] border border-white/5 rounded-xl" id="tab-group" role="tablist">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md bg-[#252832] text-white shadow-sm transition-all duration-200 text-center" id="btn-tab-activos" onclick="switchTab('tab-activos')" type="button">
+      Activos (2)
+    </button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-white transition-all duration-200 text-center" id="btn-tab-reservas" onclick="switchTab('tab-reservas')" type="button">
+      Reservas (1)
+    </button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-white transition-all duration-200 text-center" id="btn-tab-historial" onclick="switchTab('tab-historial')" type="button">
+      Historial
+    </button>
+</div>
+<!-- Contenedor Pestaña 1: Préstamos Activos -->
+<div class="space-y-space-md" id="tab-activos">
+<!-- Libro 1: Con Alerta Ámbar -->
+<div class="bg-[#1d2029] border border-white/5 rounded-2xl p-4 shadow-lg flex flex-col space-y-3">
+<div class="flex gap-3.5">
+<div class="w-20 h-28 rounded-lg overflow-hidden shrink-0 shadow-md bg-black/40 ring-1 ring-white/10">
+<img class="w-full h-full object-cover" data-alt="Classic book cover of La sombra del viento by Carlos Ruiz Zafon, misty gothic streets of Barcelona in sepia, terracotta, and deep warm shadows, vintage literary texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEcWEtQ32n4EdcDwbPeK2AzC1nD17vaeUo0OZPLTHso9EZ8ZcSg1ejloE9mnjEiyQ8iW0PJqQkeHI36oFvQeTt8y1czAUn_ia_n9vFWw8acyEn17bhSeWMG9-KSuVpHE7rjtNlIzw15nv79R6HwQwI0wSEbWuRZXbWfQnNsyTQRz2MIpfQHAwS_Dc2go18BS7Xe94sPLA3WV4KKxzaZ9eNWA1MZqMSuFyryiRyRo__Hi-n-oxN20zfrw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="px-2 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                3 días restantes
+              </span>
+<span class="font-label-sm text-[11px] text-secondary">Físico</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-white mt-1.5 truncate">La sombra del viento</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Carlos Ruiz Zafón</p>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm font-medium">Vence: 15 de Octubre</span>
+</div>
+</div>
+</div>
+<!-- Barra sutil de progreso temporal -->
+<div class="w-full h-1.5 bg-[#2a2d38] rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-amber-500 to-primary-container rounded-full w-[85%]"></div>
+</div>
+<!-- Acción Renovar -->
+<div class="pt-1 flex items-center justify-between gap-2">
+<span class="font-body-sm text-body-sm text-white/40 text-xs">Máx. 1 renovación</span>
+<button class="px-3.5 py-2 bg-primary-container hover:bg-primary text-white rounded-xl font-label-md text-label-md flex items-center gap-1.5 shadow-md active:scale-95 transition-all" onclick="renovarLibro(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">autorenew</span>
+<span>Renovar (15 días)</span>
+</button>
+</div>
+</div>
+<!-- Libro 2: En Tiempo Óptimo -->
+<div class="bg-[#1d2029] border border-white/5 rounded-2xl p-4 shadow-lg flex flex-col space-y-3">
+<div class="flex gap-3.5">
+<div class="w-20 h-28 rounded-lg overflow-hidden shrink-0 shadow-md bg-black/40 ring-1 ring-white/10">
+<img class="w-full h-full object-cover" data-alt="Cover of Sapiens A Brief History of Humankind by Yuval Noah Harari, clean ivory paper texture with subtle ancient human handprint art and deep navy typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC9nj7kG7KKPTd0r1zXhuR5kRTFiVuBn1Vy3Hql2x71adZllAVH5iebhw_H4uk11D-WEFyGfKbRaytiZXOWW7hJP-tKCU_dEcq9aaOkAi5ey72h5RR6vox3jSLBbM_KuilO8YVBePHAiqfV0O_HFDuCHRbqVrb85UfCDXagK3WyoCL_dYr8RU3I_5G0e583_OqbOrA2HH8VM1iQHZAyPLnefuQFtgRmYhaPpepgXD0pCF_3Zkk2KImMA"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                En tiempo
+              </span>
+<span class="font-label-sm text-[11px] text-secondary">Físico</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-white mt-1.5 truncate">Sapiens: De animales a dioses</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Yuval Noah Harari</p>
+</div>
+<div class="flex items-center gap-1.5 text-emerald-300">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-label-sm text-label-sm font-medium">Vence: 28 de Octubre (16 días)</span>
+</div>
+</div>
+</div>
+<!-- Barra de progreso holgada -->
+<div class="w-full h-1.5 bg-[#2a2d38] rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500/80 rounded-full w-[35%]"></div>
+</div>
+<!-- Acción Secundaria -->
+<div class="pt-1 flex items-center justify-between gap-2">
+<span class="font-body-sm text-body-sm text-white/40 text-xs">Ubicación: Sala Central (Est. 4B)</span>
+<button class="px-3.5 py-2 bg-[#262934] hover:bg-[#303442] text-white/90 rounded-xl font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Contenedor Pestaña 2: Reservas Pendientes -->
+<div class="space-y-space-md hidden" id="tab-reservas">
+<div class="bg-[#1d2029] border border-white/5 rounded-2xl p-4 shadow-lg flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-emerald-400">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase font-bold">¡Casi listo!</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/50 border border-secondary/30 text-secondary font-label-sm text-[11px]">
+          Turno #1 en cola
+        </span>
+</div>
+<div class="flex gap-3.5">
+<div class="w-16 h-24 rounded-lg overflow-hidden shrink-0 shadow-md bg-black/40 ring-1 ring-white/10">
+<img class="w-full h-full object-cover" data-alt="Cover of Ficciones by Jorge Luis Borges, labyrinth geometric art inspired by Escher in terracotta and midnight blue, philosophical and literary aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDal77OAJHAdASOXfYV0HXM2aWkL3-8d-qkFIJVQltv0pJGRXqMkx3ekPRz165_zDJehwmaXe1z5_If5F_O2zQpgohzRlo8gB2Xg1gPhS_AIVdkyHVtxTGm7VvsXuPLn3STvfluqLURGolSZ1wUoWBO42-YE2VuHR7ai_hbsRRP2jjJSe0h7IGYujMRGuNNgGiTDOy1cfwA7t9zPnJsPSmlvx-4QaXgH1aP6Fjo_mXCaroT9l_pmVV7Ag"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-center">
+<h3 class="font-headline-sm text-headline-sm text-white truncate">Ficciones</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jorge Luis Borges</p>
+<p class="font-body-sm text-body-sm text-primary mt-2">
+            Disponible para recoger <strong class="font-semibold text-white">mañana</strong> en el mostrador principal.
+          </p>
+</div>
+</div>
+<div class="bg-[#242732] p-2.5 rounded-xl flex items-center gap-2 border border-white/5">
+<span class="material-symbols-outlined text-secondary text-[20px]">store</span>
+<span class="font-body-sm text-body-sm text-white/70 text-xs">Punto de retiro: Claustro Mayor · Taquilla 14</span>
+</div>
+</div>
+</div>
+<!-- Contenedor Pestaña 3: Historial Reciente de Lecturas -->
+<div class="space-y-space-md hidden" id="tab-historial">
+<!-- Entrada Historial 1 -->
+<div class="bg-[#1d2029] border border-white/5 rounded-2xl p-3.5 shadow-md flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-16 rounded-md overflow-hidden shrink-0 bg-black/40 ring-1 ring-white/10">
+<img class="w-full h-full object-cover" data-alt="Cover of Cien anos de soledad by Gabriel Garcia Marquez, warm golden yellow butterflies with vintage paper texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDh-3Lj3FLJVbVeuaddIyQCfEc59HwYvDnrtWAEOoUwkwrBKeV0SSZPUvJnOmnlrloqXiEgoCquSP3qFxrUrdiF2HXIJ43Lv334OSH32DteuvPYObTCB4uVhe3J0yCHWW0dXxXndjnywHa1XYMFBf2uSABMPaFn7vr_yBjbo30n4muNzzPNRm2eLrNbUPU5JQSDSmi9iNzxFN-eAYyiJzXsq-iSV2R2vFY3GbDYO8kcwd_tGbtROQE1Q"/>
+</div>
+<div class="min-w-0">
+<h4 class="font-headline-sm text-base text-white truncate">Cien años de soledad</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Devuelto el 28 Sep</p>
+<!-- Calificación por estrellas -->
+<div class="flex items-center gap-0.5 text-primary mt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-emerald-300 bg-emerald-500/20 border border-emerald-500/30 px-2 py-1 rounded-md">Completado</span>
+</div>
+<!-- Entrada Historial 2 -->
+<div class="bg-[#1d2029] border border-white/5 rounded-2xl p-3.5 shadow-md flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-16 rounded-md overflow-hidden shrink-0 bg-black/40 ring-1 ring-white/10">
+<img class="w-full h-full object-cover" data-alt="Cover of El nombre de la rosa by Umberto Eco, medieval monastery architectural arch illuminated by candlelight warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6yI_mFggHtgQJroZ2JVmsLLOrtKARnm8ak5GT0Ru8xzGs2f3IwbyccxAYr5Hj71Hq6BYr-1nx4dcXsoC9eflTrg4PKk8EO3WqxpODATTcICaFqbiWizB6e6VKDAkXMlZk3iyU9j72y3-9c1YwkOqWh9EcM2wproDZCupP4COHBsKl57KoG7G4ASIMbAfXRLSNW6bjLldJodzpYuG0NF6Z5qySJAmAc4ZAKDRbpwhWTx_uiomazCUR6Q"/>
+</div>
+<div class="min-w-0">
+<h4 class="font-headline-sm text-base text-white truncate">El nombre de la rosa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Devuelto el 10 Sep</p>
+<div class="flex items-center gap-0.5 text-primary mt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-emerald-300 bg-emerald-500/20 border border-emerald-500/30 px-2 py-1 rounded-md">Completado</span>
+</div>
+</div>
+<!-- Notificación Informativa de Sala de Lectura -->
+<div class="bg-[#1e212a] border border-white/5 rounded-2xl p-4 flex items-start gap-3">
+<div class="p-2 rounded-xl bg-primary/20 border border-primary/30 text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+</div>
+<div class="text-xs">
+<p class="font-label-md text-label-md text-white">¿Necesitas renovar en sala?</p>
+<p class="font-body-sm text-body-sm text-white/55 mt-0.5">
+        Los ejemplares físicos disponen de buzón de devolución desatendido 24h en la entrada norte de Atenea.
+      </p>
+</div>
+</div>
+</div>
+<!-- Script Vanilla para interactividad fluida -->
+<script>
+  function switchTab(activeTabId) {
+    const tabs = ['tab-activos', 'tab-reservas', 'tab-historial'];
+    tabs.forEach(tab => {
+      const el = document.getElementById(tab);
+      const btn = document.getElementById('btn-' + tab);
+      if (tab === activeTabId) {
+        el.classList.remove('hidden');
+        btn.classList.add('bg-[#252832]', 'text-white', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        el.classList.add('hidden');
+        btn.classList.remove('bg-[#252832]', 'text-white', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  function renovarLibro(btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Renovando...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Renovado (+15d)</span>';
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-emerald-600', 'text-white');
+    }, 600);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#111319]/90 backdrop-blur-xl border-t border-white/5" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-white/50 hover:text-primary transition-colors gap-0.5" data-path="explorar" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Explorar</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-white/50 hover:text-primary transition-colors gap-0.5" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[24px]">local_library</span><span class="font-label-sm text-label-sm">Catálogo</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-primary transition-colors gap-0.5" data-path="prestamos" href="#"><span class="material-symbols-outlined text-[24px]">bookmark</span><span class="font-label-sm text-label-sm font-semibold">Préstamos</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-white/50 hover:text-primary transition-colors gap-0.5" data-path="comunidad" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="font-label-sm text-label-sm">Comunidad</span></a></div></nav></body></html>

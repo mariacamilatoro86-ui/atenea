@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-bright": "#373940",
+        "tertiary-container": "#aa9179",
+        "tertiary": "#dec2a7",
+        "on-secondary": "#4e2601",
+        "outline-variant": "#55433c",
+        "on-primary-fixed": "#370e00",
+        "surface-dim": "#111319",
+        "surface-container-high": "#282a30",
+        "secondary-fixed-dim": "#fcb887",
+        "surface-container-low": "#191b21",
+        "on-surface-variant": "#dcc1b7",
+        "secondary": "#fcb887",
+        "on-tertiary-fixed-variant": "#56432f",
+        "on-secondary-fixed": "#301400",
+        "on-primary-fixed-variant": "#7c2e08",
+        "surface-container": "#1d1f26",
+        "surface-container-highest": "#33353b",
+        "tertiary-fixed": "#fbddc2",
+        "secondary-fixed": "#ffdcc5",
+        "surface-container-lowest": "#0c0e14",
+        "inverse-on-surface": "#2e3037",
+        "primary-fixed-dim": "#ffb598",
+        "background": "#111319",
+        "surface-tint": "#ffb598",
+        "outline": "#a38c83",
+        "inverse-primary": "#9a451e",
+        "on-error-container": "#ffdad6",
+        "on-primary-container": "#561b00",
+        "primary": "#ffb598",
+        "surface": "#111319",
+        "error-container": "#93000a",
+        "on-secondary-fixed-variant": "#693b15",
+        "on-background": "#e2e2ea",
+        "error": "#ffb4ab",
+        "inverse-surface": "#e2e2ea",
+        "on-surface": "#e2e2ea",
+        "on-tertiary-container": "#3c2b18",
+        "primary-container": "#e07a4f",
+        "secondary-container": "#6c3d17",
+        "on-secondary-container": "#ecaa7a",
+        "tertiary-fixed-dim": "#dec2a7",
+        "on-tertiary": "#3e2d1a",
+        "on-tertiary-fixed": "#271908",
+        "primary-fixed": "#ffdbce",
+        "surface-variant": "#33353b",
+        "on-primary": "#591c00",
+        "on-error": "#690005"
+      },
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      spacing: {
+        "space-md": "1rem",
+        "gutter-mobile": "1rem",
+        "margin-mobile": "1.25rem",
+        "space-sm": "0.5rem",
+        "margin": "1.25rem",
+        "gutter": "1rem",
+        "space-xs": "0.25rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem"
+      },
+      fontFamily: {
+        "title-md": ["Inter"],
+        "body-md": ["Inter"],
+        "body-lg": ["EB Garamond"],
+        "headline-lg": ["EB Garamond"],
+        "display-lg": ["EB Garamond"],
+        "display-lg-mobile": ["EB Garamond"],
+        "title-lg": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["EB Garamond"],
+        "label-sm": ["Inter"],
+        "headline-md": ["EB Garamond"],
+        "label-md": ["Inter"],
+        "label-lg": ["Inter"]
+      },
+      fontSize: {
+        "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "body-lg": ["20px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+        "title-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "headline-sm": ["21px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }],
+        "headline-md": ["26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "500" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+      }
+    }
+  }
+};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+      background-color: #111319;
+    }
+  </style>
+</head><body class="bg-background text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-[#111319]/90 backdrop-blur-xl border-b border-[#282a30]/60"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Logo Atenea Biblioteca" class="h-8 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(255,181,152,0.15)]" src="https://lh3.googleusercontent.com/d/1O5D6k8_gO1i8f2-iN74uQx_hRjTzJb-l"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Atenea</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-none mt-0.5">Biblioteca</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificaciones" class="relative w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-[#1d1f26] transition-colors" type="button"><span class="material-symbols-outlined text-2xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-[#111319]"></span></button><a class="w-11 h-11 rounded-full p-0.5 flex items-center justify-center hover:opacity-90 transition-opacity ring-1 ring-[#33353b]" data-path="perfil-de-lector" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOQt6x0sYTJHjfCaKWZmgAl8fSiXfA8SHTlZ4wFi0kSduxaSafAIkMIj3-e0eLOHBRpEwKbmGMOeW_ZDV89S6VpJG3Zdlbok27JBydM6Cpy6qtugmVlmaSlcEwAnSPPupUlrEAfcMPSXt4wwRpupirTB5q0Z-f1rVbzS3pUL03N8xOWEKV5dla1pVxfgk6GzNF6nWXOIUr795-kv2ryijCqOoBOS_6_IHlcsqR-k0tnlo8PmvN20nAxg"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-[#111319] pb-24"><div class="flex flex-col w-full px-margin pb-10 space-y-space-lg">
+<!-- Encabezado con selector de agenda mensual -->
+<section class="flex flex-col pt-space-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Agenda Cultural</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Octubre 2024</h1>
+</div>
+<div class="flex items-center gap-1 bg-[#1d1f26] border border-[#282a30] px-space-xs py-1 rounded-full shadow-sm">
+<button aria-label="Mes anterior" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-md text-label-md text-on-surface px-1">Semana 3</span>
+<button aria-label="Mes siguiente" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Carrusel horizontal de días -->
+<div class="flex gap-space-xs overflow-x-auto py-2 -mx-margin px-margin no-scrollbar scroll-smooth">
+<button class="flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant" type="button">
+<span class="font-label-sm text-label-sm opacity-60">LUN</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 text-on-surface">14</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant" type="button">
+<span class="font-label-sm text-label-sm opacity-60">MAR</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 text-on-surface">15</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1"></span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant" type="button">
+<span class="font-label-sm text-label-sm opacity-60">MIÉ</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 text-on-surface">16</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+<!-- Día Activo -->
+<button class="flex flex-col items-center justify-center min-w-[54px] py-2.5 rounded-xl bg-gradient-to-b from-[#e07a4f] to-[#b05f38] text-white shadow-lg shadow-orange-950/40 border border-[#ffb598]/30 scale-105 transition-transform" type="button">
+<span class="font-label-sm text-label-sm text-primary-fixed font-semibold">JUE</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 font-bold">17</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed mt-1 shadow-sm"></span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant" type="button">
+<span class="font-label-sm text-label-sm opacity-60">VIE</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 text-on-surface">18</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-1"></span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant" type="button">
+<span class="font-label-sm text-label-sm opacity-60">SÁB</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 text-on-surface">19</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant" type="button">
+<span class="font-label-sm text-label-sm opacity-60">DOM</span>
+<span class="font-headline-sm text-headline-sm mt-0.5 text-on-surface">20</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+</div>
+</section>
+<!-- Filtros Temáticos con Chips -->
+<section class="flex gap-2 overflow-x-auto no-scrollbar -mx-margin px-margin py-1">
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-white font-label-md text-label-md shadow-sm whitespace-nowrap flex items-center gap-1 border border-primary/40">
+<span class="material-symbols-outlined text-[16px]">done</span>
+      Todos
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#1e212b] border border-[#282a30] text-on-surface-variant hover:text-primary hover:border-outline-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+      Clubes de lectura
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#1e212b] border border-[#282a30] text-on-surface-variant hover:text-primary hover:border-outline-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+      Talleres infantiles
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#1e212b] border border-[#282a30] text-on-surface-variant hover:text-primary hover:border-outline-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+      Encuentro con autores
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#1e212b] border border-[#282a30] text-on-surface-variant hover:text-primary hover:border-outline-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+      Cine fórum
+    </button>
+</section>
+<!-- Sección destacada: Club de Lectura del Mes -->
+<section class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Club de Lectura del Mes</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-secondary-container/60 border border-outline-variant/40 px-2.5 py-0.5 rounded-full">Destacado</span>
+</div>
+<div class="bg-[#1e212b] border border-[#282a30] rounded-xl p-4 shadow-lg shadow-black/30 flex flex-col gap-4">
+<div class="flex gap-3.5 items-start">
+<div class="relative w-24 h-36 rounded-lg overflow-hidden shrink-0 shadow-md bg-[#191b21] ring-1 ring-white/10">
+<img class="w-full h-full object-cover" data-alt="Warm atmospheric vintage book cover illustration of Pedro Paramo by Juan Rulfo, featuring a spectral Mexican arid village in earthy terracotta, warm sepia, dust trails, and subtle poetic surrealism under soft diffused desert daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjPIeQ1RMKezK6gpntjrVNCPWe5ykCL1zk9uTrjaWlvKebuyWFpK0lEiIgECehTOAp935FilwiGaPj1YRsjE7oBwl1b33nov36M9ClCW5xOtL6CRYzSa0YYrZbDoJQ5VOcmuZgSHh9R3PTH9QVvvqWXlYNshEt4leWybVZNBudtd6oA6499EVlSIZA4Z6Kpf5Vnwq-Q8vPseaDepElW3B0SIpKMWv4FiWR_lA3zHCODa6YzS5V0CacTA"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 to-transparent p-1.5 text-center">
+<span class="font-label-sm text-label-sm text-tertiary text-[10px]">Novela</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 flex-wrap">
+<span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Círculo Literario</span>
+<span class="bg-[#4a1c1d] border border-error/30 text-error font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">Quedan 4 plazas</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight mt-0.5 truncate">Pedro Páramo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Juan Rulfo</p>
+<div class="mt-2.5 flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<p class="font-label-md text-label-md leading-tight text-on-surface">Jueves 17 Oct, 18:30h</p>
+</div>
+<div class="mt-1 flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] truncate">Sala Polivalente &amp; Google Meet</p>
+</div>
+</div>
+</div>
+<!-- Moderador y Comunidad -->
+<div class="bg-[#161820] border border-[#282a30]/80 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 ring-1 ring-white/10" data-alt="Portrait of Professor Mario Valenzuela, a thoughtful warm hispanic male literature professor in his fifties wearing subtle round glasses and a wool scarf in a library room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBUMFR8aag3_MGgtyXIp8iBleprysA2oiek5paWG2H6iAnxkjQSKFHvBSqQBWED2SlfLIq9POJMiTKshRk0w1wUug5WZ85TDoo4oazO0KaUoEyo8Fc0VE4eQ1bmKFo-awtPOt35H628DJsnsfQRBmVGEQuL1zDajma8tU1MuNzyM5A3C_WwEhMHGMV9QfJBfjlznGFsFFSJDVTibFv2i1jW0x4qyXmMMYnsODk6JN6FJhRbP9VWGRshQ"/>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-label-sm text-on-surface leading-tight truncate">Prof. Mario Valenzuela</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Moderador residente</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant shrink-0 pl-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">group</span>
+<span class="font-label-md text-label-md text-on-surface">24 inscritos</span>
+</div>
+</div>
+<button class="w-full bg-primary-container hover:bg-[#b05f38] text-white py-2.5 px-4 rounded-lg font-label-lg text-label-lg shadow-md shadow-orange-950/30 transition-colors flex items-center justify-center gap-2 border border-primary/20" type="button">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span>Inscribirme gratis</span>
+</button>
+</div>
+</section>
+<!-- Lista de Próximos Eventos y Talleres -->
+<section class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">calendar_month</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Próximas Actividades</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Ver todas (12)</a>
+</div>
+<div class="space-y-3">
+<!-- Evento 1: Encuadernación -->
+<article class="bg-[#1e212b] border border-[#282a30] rounded-xl p-3.5 shadow-sm flex flex-col gap-2.5">
+<div class="flex gap-3">
+<div class="w-14 h-16 rounded-lg bg-[#161820] border border-[#282a30] flex flex-col items-center justify-center text-center shrink-0">
+<span class="font-label-sm text-label-sm text-primary uppercase">SÁB</span>
+<span class="font-headline-md text-headline-md text-on-surface leading-none mt-0.5">19</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">11:00h</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-[#242b26] border border-emerald-900/40 text-[#a8deb5] font-label-sm text-[10px] px-2 py-0.5 rounded-full">Presencial · Cupos limitados</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mt-1">Taller de Encuadernación Artesanal Japonesa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Aprende costura Yotsume Toji. Incluye papel washi y herramientas.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">handyman</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Materiales incluidos</span>
+</div>
+<button class="bg-[#282a30] hover:bg-[#33353b] text-on-surface hover:text-primary font-label-md text-label-md px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 border border-outline-variant/30" type="button">
+<span>Reservar plaza</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Evento 2: Mesa redonda -->
+<article class="bg-[#1e212b] border border-[#282a30] rounded-xl p-3.5 shadow-sm flex flex-col gap-2.5">
+<div class="flex gap-3">
+<div class="w-14 h-16 rounded-lg bg-[#161820] border border-[#282a30] flex flex-col items-center justify-center text-center shrink-0">
+<span class="font-label-sm text-label-sm text-primary uppercase">MIÉ</span>
+<span class="font-headline-md text-headline-md text-on-surface leading-none mt-0.5">23</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">19:00h</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-[#2a2720] border border-amber-900/40 text-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full">Mesa Redonda</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Auditorio Mayor</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mt-1">Literatura fantástica contemporánea</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Debate abierto con 3 autores invitados y sesión de firmas.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center -space-x-2">
+<img class="w-6 h-6 rounded-full object-cover shadow-sm ring-1 ring-[#1e212b]" data-alt="Portrait avatar of author Clara Ortiz, smiling warm young woman with curly hair in library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANyEPs91hJgipL0QA2pIwURXzGuIpKLpUGo6HpBAT5ZpMVLxZC9pY0B7S4lMWvE2EeBzlkguJ1KaRzl8iZXnu2lmCQ31I86NTzeL4K9qhC_eH8xaOGWm8bbQCOoO-FJOdZoiEWNixUSaCJLGq0xklSL2V2KrfKsEv7eY9dx1WUUNPeGNiuJBIHzR3VyRaMgqhTCnIbvs003-bKTreesER1C9RxJXE3sYp8PF1UDc-07ERPgIe0whCo8g"/>
+<img class="w-6 h-6 rounded-full object-cover shadow-sm ring-1 ring-[#1e212b]" data-alt="Portrait avatar of fantasy writer Diego Mendez, stylish man in black turtle neck with glasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT4muGFmk9otVKRAmrp8tkUvRI3sLxglLOQ-9M1XQOrS6gYbGaBj7GoMhzUPoCogMg3pJNO205Z3DkDlf0pjkrqTWWQeqUh8u86OfldU7qSRPVt5FcCSXHupEF0qiqwpcSZQTM05Wla4-v7WQL3Sl79X8btYUlL4HzAiBcAmQw1L6DBrS4t8hnD7wjH8miC8L303i98HlZzQ7SwxqO6WQvxL9AxO-T__A63fA4DfVYCZBqFVbs_ns6xA"/>
+<img class="w-6 h-6 rounded-full object-cover shadow-sm ring-1 ring-[#1e212b]" data-alt="Portrait avatar of guest writer Sofia Leiva, mature woman with warm eyes in bookstore setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE85tZ9aHUEIuSqiM8fQJQQjaQC5shAoqeNXUqu8Q_ehA7RSQAoq_MfNgt1RQWoRwLZkLyLtvIwi_UsvZLKQmsX6Hnik7NOssC6d2Bqw9lIa63BMFlCxKflQxqTRPk6Rwr_il633WU3y2kIkYXttZxZ9ovRFdG75zWlNITWbCmYZmR2dvevS1AAC1yqx3TmwlTAnvLRjiO7oKoj2-0BY-E6-J0Zy4GjXZHmJEN74L_F1ZTy1ZoeCdvuQ"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant pl-3">3 autores invitados</span>
+</div>
+<button class="bg-[#282a30] hover:bg-[#33353b] text-on-surface hover:text-primary font-label-md text-label-md px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 border border-outline-variant/30" type="button">
+<span>Asistir</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Evento 3: Infantil -->
+<article class="bg-[#1e212b] border border-[#282a30] rounded-xl p-3.5 shadow-sm flex flex-col gap-2.5">
+<div class="flex gap-3">
+<div class="w-14 h-16 rounded-lg bg-[#161820] border border-[#282a30] flex flex-col items-center justify-center text-center shrink-0">
+<span class="font-label-sm text-label-sm text-primary uppercase">DOM</span>
+<span class="font-headline-md text-headline-md text-on-surface leading-none mt-0.5">27</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">12:00h</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-[#38231c] border border-orange-900/40 text-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full">Familiar · 4 a 9 años</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Rincón del Cuento</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mt-1">La Hora del Cuento: Fábulas mitológicas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Narración oral teatralizada con títeres de sombras y títeres de dedos.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">child_care</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acceso libre sin reserva previa</span>
+</div>
+<button class="bg-[#282a30] hover:bg-[#33353b] text-on-surface hover:text-primary font-label-md text-label-md px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 border border-outline-variant/30" type="button">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Foro y Retos de Lectura Comunitarios -->
+<section class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Retos &amp; Comunidad</h2>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:text-primary flex items-center gap-0.5" type="button">
+<span>Mi progreso</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Tarjeta del Reto Anual -->
+<div class="bg-gradient-to-br from-[#1e212b] to-[#151720] border border-[#282a30] rounded-xl p-4 shadow-md flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary/5 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Reto Anual Atenea</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-0.5">25 libros en 2024</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Llevamos 4,812 lecturas registradas entre 380 lectores.</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-[#38231c] border border-primary/30 flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">emoji_events</span>
+</div>
+</div>
+<!-- Barra de progreso comunitario -->
+<div class="space-y-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Progreso colectivo</span>
+<span class="text-primary font-bold">76% del objetivo anual</span>
+</div>
+<div class="w-full h-2.5 bg-[#101217] rounded-full overflow-hidden border border-[#282a30]">
+<div class="h-full bg-gradient-to-r from-primary-container to-primary rounded-full transition-all duration-700 shadow-[0_0_8px_rgba(255,181,152,0.35)]" style="width: 76%"></div>
+</div>
+<div class="flex justify-between items-center text-body-sm text-[12px] text-on-surface-variant pt-1">
+<span>Tu aporte actual: <strong class="text-on-surface">14 libros</strong></span>
+<span class="text-tertiary flex items-center gap-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> ¡Vas por delante!
+          </span>
+</div>
+</div>
+</div>
+<!-- Muro de Recomendaciones de Miembros -->
+<div class="space-y-2.5 pt-1">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-on-surface">Ecos de Lectura</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">De la comunidad hoy</span>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar -mx-margin px-margin py-1">
+<!-- Recomendación 1 -->
+<div class="min-w-[240px] max-w-[240px] bg-[#1e212b] border border-[#282a30] rounded-xl p-3 shadow-sm flex flex-col justify-between hover:border-outline-variant/50 transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<img class="w-6 h-6 rounded-full object-cover ring-1 ring-white/10" data-alt="Portrait avatar of reader Elena, middle-aged warm woman smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxL447WiaRp0EF2nTARdfiIzMnd7TnIEDwjqBnTcI7OpLXHPcHroIF13qtpfS1HiITmS7UOh1uArnQzuI4dOWILMj_lD0BIeJQGLAg62zMpwPrpP9aTmpphGKBb5SGVkNd0KhQ7IP9yveBI4O_W92a-o7aTVJghYCy3d7ydG4ddgu5KHd_P3H4ldMGE1w0uwwno6aE_d4XeIv1jDedFw_m7ddaz7D1QFgkzRHnhVEf9roZvecb01tGAg"/>
+<span class="font-label-md text-label-md text-on-surface truncate">Elena R.</span>
+<span class="text-primary text-[11px] ml-auto">★★★★★</span>
+</div>
+<p class="font-display-lg italic text-[14px] leading-snug text-[#dcc1b7] line-clamp-3">
+              "«Los desposeídos» de Le Guin me cambió la perspectiva sobre la utopía. ¡Lectura obligatoria!"
+            </p>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant border-t border-[#282a30]/60">
+<span class="font-label-sm text-label-sm text-[11px] text-primary">Los desposeídos</span>
+<button class="flex items-center gap-1 text-[11px] text-on-surface-variant hover:text-primary transition-colors" onclick="this.classList.toggle('text-primary');" type="button">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>12</span>
+</button>
+</div>
+</div>
+<!-- Recomendación 2 -->
+<div class="min-w-[240px] max-w-[240px] bg-[#1e212b] border border-[#282a30] rounded-xl p-3 shadow-sm flex flex-col justify-between hover:border-outline-variant/50 transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<img class="w-6 h-6 rounded-full object-cover ring-1 ring-white/10" data-alt="Portrait avatar of reader Carlos, young student smiling with coffee." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfdlobaQs7NhNSiDOycTW9fdZ1s9WEXoela36RQ9bSCtp8VkDZyFlJD5e26bwooKWJm5iT48NqcifZpxN-VJkNmC-k-y8qlJzrfgnBEBAHLNierYPdNAL5iN_3xwL8yKDHI3swVJY_X_knJ2LwbgrzKnJQLYoNqvhuYWoNyB2NzQiKmhgaoU6rBCJbmc7Dh2ZdBkzP9KltGSG4YS3jTjDSJ7YrIluMaj2qk79BBPuL_2Cxn6ICGVrqLw"/>
+<span class="font-label-md text-label-md text-on-surface truncate">Carlos V.</span>
+<span class="text-primary text-[11px] ml-auto">★★★★★</span>
+</div>
+<p class="font-display-lg italic text-[14px] leading-snug text-[#dcc1b7] line-clamp-3">
+              "El club de Rulfo es ideal para releer Pedro Páramo. Cada página tiene un secreto enterrado."
+            </p>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant border-t border-[#282a30]/60">
+<span class="font-label-sm text-label-sm text-[11px] text-primary">Pedro Páramo</span>
+<button class="flex items-center gap-1 text-[11px] text-on-surface-variant hover:text-primary transition-colors" onclick="this.classList.toggle('text-primary');" type="button">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>18</span>
+</button>
+</div>
+</div>
+<!-- Recomendación 3 -->
+<div class="min-w-[240px] max-w-[240px] bg-[#1e212b] border border-[#282a30] rounded-xl p-3 shadow-sm flex flex-col justify-between hover:border-outline-variant/50 transition-colors">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<img class="w-6 h-6 rounded-full object-cover ring-1 ring-white/10" data-alt="Portrait avatar of Beatriz, librarian and reader with pleasant smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgZC2ujfqXMq57Ty85Qd_lg0vA0UI-RQlWNELaz4ys6-I80E4j9CpRHAcoNM8hTtzEHRIxVRtkyCpuUXCyfRmNXoLYYZjCS1gJgLXvmvKuHHQWEz5wL-RjtqYapcnfYKhOWrzuKjvJBapMjXKCVQG5XN7DCgauoNgmKVyVwUaJpaWOFj-V3LDYlaXG2dy5BxOi75P4UtiF21ja-94IGTbDo9hY5CXrZc76XId0NvUYVFqS9cayuddcLg"/>
+<span class="font-label-md text-label-md text-on-surface truncate">Beatriz M.</span>
+<span class="text-primary text-[11px] ml-auto">★★★★☆</span>
+</div>
+<p class="font-display-lg italic text-[14px] leading-snug text-[#dcc1b7] line-clamp-3">
+              "El taller de encuadernación del año pasado fue mágico. ¡No dejen pasar los cupos de este sábado!"
+            </p>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant border-t border-[#282a30]/60">
+<span class="font-label-sm text-label-sm text-[11px] text-primary">Encuadernación</span>
+<button class="flex items-center gap-1 text-[11px] text-on-surface-variant hover:text-primary transition-colors" onclick="this.classList.toggle('text-primary');" type="button">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>9</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Botón de acción para proponer club o actividad -->
+<section class="bg-[#1e212b] border border-[#282a30] rounded-xl p-4 flex items-center justify-between gap-3 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#38231c] border border-secondary/30 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">add_comment</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface leading-tight">¿Tienes una iniciativa literaria?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Propón un nuevo club de lectura o taller en Atenea.</p>
+</div>
+</div>
+<button class="bg-[#282a30] border border-outline-variant/30 text-on-surface hover:text-primary px-3 py-2 rounded-lg font-label-md text-label-md transition-colors shrink-0" type="button">
+      Proponer
+    </button>
+</section>
+</div>
+<script>
+  // Micro-interacción: Selección activa en carrusel de fechas
+  document.querySelectorAll('section:first-of-type button').forEach(button => {
+    button.addEventListener('click', function() {
+      const parent = this.parentElement;
+      parent.querySelectorAll('button').forEach(btn => {
+        btn.className = 'flex flex-col items-center justify-center min-w-[50px] py-2.5 rounded-xl bg-[#1a1c24] border border-[#282a30]/60 hover:bg-[#282a30] transition-all text-on-surface-variant';
+        const label = btn.querySelector('span:first-child');
+        if (label) label.className = 'font-label-sm text-label-sm opacity-60';
+        const num = btn.querySelector('span:nth-child(2)');
+        if (num) num.className = 'font-headline-sm text-headline-sm mt-0.5 text-on-surface';
+        const dot = btn.querySelector('span:last-child');
+        if (dot && dot.classList.contains('bg-primary-fixed')) {
+          dot.className = 'w-1.5 h-1.5 rounded-full bg-primary mt-1';
+        }
+      });
+      this.className = 'flex flex-col items-center justify-center min-w-[54px] py-2.5 rounded-xl bg-gradient-to-b from-[#e07a4f] to-[#b05f38] text-white shadow-lg shadow-orange-950/40 border border-[#ffb598]/30 scale-105 transition-transform';
+      const activeLabel = this.querySelector('span:first-child');
+      if (activeLabel) activeLabel.className = 'font-label-sm text-label-sm text-primary-fixed font-semibold';
+      const activeNum = this.querySelector('span:nth-child(2)');
+      if (activeNum) activeNum.className = 'font-headline-sm text-headline-sm mt-0.5 font-bold';
+      const activeDot = this.querySelector('span:last-child');
+      if (activeDot) {
+        activeDot.className = 'w-1.5 h-1.5 rounded-full bg-primary-fixed mt-1 shadow-sm';
+      }
+    });
+  });
+
+  // Micro-interacción: Cambio de filtro temático
+  document.querySelectorAll('section:nth-of-type(2) button').forEach(chip => {
+    chip.addEventListener('click', function() {
+      const container = this.parentElement;
+      container.querySelectorAll('button').forEach(c => {
+        c.className = 'px-3.5 py-1.5 rounded-full bg-[#1e212b] border border-[#282a30] text-on-surface-variant hover:text-primary hover:border-outline-variant font-label-md text-label-md whitespace-nowrap transition-colors';
+        const icon = c.querySelector('span.material-symbols-outlined');
+        if (icon) icon.remove();
+      });
+      this.className = 'px-3.5 py-1.5 rounded-full bg-primary-container text-white font-label-md text-label-md shadow-sm whitespace-nowrap flex items-center gap-1 border border-primary/40';
+      const checkIcon = document.createElement('span');
+      checkIcon.className = 'material-symbols-outlined text-[16px]';
+      checkIcon.textContent = 'done';
+      this.prepend(checkIcon);
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#111319]/90 backdrop-blur-xl border-t border-[#282a30]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-primary transition-colors gap-0.5" data-path="explorar" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Explorar</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-primary transition-colors gap-0.5" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[24px]">local_library</span><span class="font-label-sm text-label-sm">Catálogo</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs text-on-surface-variant hover:text-primary transition-colors gap-0.5" data-path="prestamos" href="#"><span class="material-symbols-outlined text-[24px]">bookmark</span><span class="font-label-sm text-label-sm">Préstamos</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] px-space-xs transition-colors gap-0.5 text-primary font-semibold" data-path="comunidad" href="#"><span class="material-symbols-outlined text-[24px]">groups</span><span class="font-label-sm text-label-sm">Comunidad</span></a></div></nav></body></html>
